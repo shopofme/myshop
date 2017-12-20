@@ -1,0 +1,102 @@
+<div class="myshop-service">
+	<ul class="w1224 clearfix">
+		<li>
+			<i class="ico ico-day7"></i>
+			<p class="service">7天无理由退货</p>
+		</li>
+		<li>
+			<i class="ico ico-day15"></i>
+			<p class="service">15天免费换货</p>
+		</li>
+		<li>
+			<i class="ico ico-quality"></i>
+			<p class="service">正品行货 品质保障</p>
+		</li>
+		<li>
+			<i class="ico ico-service"></i>
+			<p class="service">专业售后服务</p>
+		</li>
+	</ul>
+</div>
+<div class="footer">
+	<div class="w1224 clearfix" style="padding-bottom: 10px;">
+		<div class="left-help-list clearfix">
+			<!--<div class="clearfix">
+				<myshop sql="select * from `__PREFIX__article_cat` where cat_id < 6" key="k" item='v'>
+					<dl>
+						<dt>{$v[cat_name]}</dt>
+						<myshop sql="select * from `__PREFIX__article` where cat_id = $v[cat_id]  and is_open=1 limit 5" key="k2" item='v2'>
+						<dd><a href="{:U('Home/Article/detail',array('article_id'=>$v2[article_id]))}">{$v2[title]}</a></dd>
+						</myshop>
+					</dl>
+				</myshop>
+			</div>-->
+			<div class="friendship-links">
+	            <span>友情链接 : </span>
+                <myshop sql="select * from `__PREFIX__friend_link` where is_show=1" key="k" item='v'>
+                    <a href="{$v[link_url]}" <if condition="$v.target eq 1">target="_blank"</if> >{$v[link_name]}</a>
+                </myshop>
+	        </div>	
+		</div>
+	</div>
+    <div class="mod_copyright p">
+        <!--<div class="grid-top">
+            <a href="javascript:void (0);">关于我们</a><span>|</span>
+            <a href="javascript:void (0);">联系我们</a><span>|</span>
+            <myshop sql="select * from `__PREFIX__article` where cat_id = 5 and is_open=1" key="k" item='v'>
+                <a href="{:U('Home/Article/detail',array('article_id'=>$v[article_id]))}">{$v[title]}</a>
+                <span>|</span>
+            </myshop>
+        </div>-->
+        <p>Copyright © 2017-2025 商城 版权所有 保留一切权利 备案号:{$my_shop_config['shop_info_record_no']}</p>
+    </div>
+</div>
+<style>
+    .mod_copyright {
+        border-top: 1px solid #EEEEEE;
+    }
+    .grid-top {
+        margin-top: 20px;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: #666;
+    }
+    a {
+        background: transparent;
+    }
+    .grid-top span {
+        margin: 0 10px;
+        color: #ccc;
+    }
+    .mod_copyright > p {
+        margin-top: 10px;
+        color: #666;
+        text-align: center;
+    }
+    .mod_copyright_auth_ico {
+        overflow: hidden;
+        display: inline-block;
+        margin: 0 3px;
+        width: 103px;
+        height: 32px;
+        background-image: url(__STATIC__/images/ico_footer.png);
+        line-height: 1000px;
+    }
+    .mod_copyright_auth_ico_1 {
+        background-position: 0 -151px;
+    }
+    .mod_copyright_auth_ico_2 {
+        background-position: -104px -151px;
+    }
+    .mod_copyright_auth_ico_3 {
+        background-position: 0 -184px;
+    }
+    .mod_copyright_auth_ico_4 {
+        background-position: -104px -184px;
+    }
+    .mod_copyright_auth_ico_5 {
+        background-position: 0 -217px;
+    }
+</style>
